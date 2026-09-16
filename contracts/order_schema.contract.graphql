@@ -1,0 +1,44 @@
+enum OrderStatus {
+  RECEIVED
+  VALIDATING
+  PAYMENT_PENDING
+  PAID
+  COMPLETED
+  FAILED
+}
+
+type OrderItem {
+  productId: ID!
+  quantity: Int!
+  unitPrice: Float!
+}
+
+type OrderSummary {
+  orderId: ID!
+  customerId: ID!
+  totalAmount: Float!
+  currency: String!
+  status: OrderStatus!
+  items: [OrderItem!]!
+  createdAt: String!
+}
+
+input CreateOrderInput {
+  orderId: ID!
+  customerId: ID!
+  totalAmount: Float!
+  currency: String!
+  idempotencyKey: String!
+}
+
+type Mutation {
+  createOrderSaga(input: CreateOrderInput!): OrderSummary!
+}
+
+type Query {
+  getOrderById(orderId: ID!): OrderSummary
+}
+
+type Subscription {
+  orderStatusUpdated(orderId: ID!): OrderSummary!
+}

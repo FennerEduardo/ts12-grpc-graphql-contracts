@@ -1,0 +1,97 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-09-16T14:24:44.565Z",
+  "createdBy": "gherkin-ai-cli",
+  "artifacts": [
+    {
+      "filePath": "ADR-001-architecture-decisions.md",
+      "type": "other",
+      "checksum": "4e9671131a2f8074e7a6cbcdca8443f428650241e58b7ce658f561c1dd66c83c"
+    },
+    {
+      "filePath": "openapi.json",
+      "type": "openapi",
+      "checksum": "90b33c035847d89346ad24007b9ed30fc667c9c9c0c40e48f2b681334516ed71"
+    },
+    {
+      "filePath": "contracts.ts",
+      "type": "contract",
+      "checksum": "71daa5a23eead775532128349df4ab6ea08b228d3609ca2d7e000fb973519dae"
+    },
+    {
+      "filePath": "asyncapi.json",
+      "type": "contract",
+      "checksum": "c57dddb35260fe01a7f5d0d59e9f377d250aadd29d4c8e930e145a59ae824887"
+    },
+    {
+      "filePath": "package.json",
+      "type": "config",
+      "checksum": "ebf3528912330c39f4df2c4ad7bd926ce7ba4d39879c9e6494e472c6053c06c3"
+    },
+    {
+      "filePath": "fixtures.ts",
+      "type": "fixture",
+      "checksum": "438b5640848172a0504f1b3a009d4dead68cab38ad20bf2be8ddb630b4655119"
+    },
+    {
+      "filePath": "seed.sql",
+      "type": "fixture",
+      "checksum": "b9d7195e1ad71f20ca14bbe2309f8ecef9fc0313e7be17447719de154dc91cff"
+    },
+    {
+      "filePath": "test/steps/compilaci-n-e-implementaci-n-de-contratos-grpc-y-graphql-en-gherkin-ai.steps.ts",
+      "type": "test",
+      "checksum": "68d454b2ea213ceb7eb31d529e41b9297daddd313a9b17fb96f6a0bb93e59a11"
+    },
+    {
+      "filePath": "prisma/schema.prisma",
+      "type": "other",
+      "checksum": "25a20f8142213bbdaf8e8e0f5351d6b460f28d1b95f5a49e116603beb98909f8"
+    },
+    {
+      "filePath": "src/persistence/compilacineimplementacindecontratosgrpcygraphqlengherkinai.repository.ts",
+      "type": "other",
+      "checksum": "8b51bc778edaf5e438fb8839c1be0742c57dafcffa2f5308e30e254d18f92b01"
+    },
+    {
+      "filePath": "docker-compose.yml",
+      "type": "config",
+      "checksum": "d24ecb6917fde33ddffef311bf3d528564edc606f85a77b4c9c8644a8f9d9c1b"
+    },
+    {
+      "filePath": ".env.example",
+      "type": "config",
+      "checksum": "418981114e32a16db1cf18464ff67a0692cbcc0676dae1e1c67bcbd1101424c2"
+    },
+    {
+      "filePath": "infrastructure/lib/graphql-grpc-domain-contracts-stack.ts",
+      "type": "config",
+      "checksum": "1acde2a2b591d37e3cdaa174eb6f60218168d63b77a3657806d3ef144f27284a"
+    },
+    {
+      "filePath": "infrastructure/cdk.json",
+      "type": "config",
+      "checksum": "24b2f62d0d2e08bd93e2b2d28b01950d93830f681f1fb918dd2ac1541152a731"
+    },
+    {
+      "filePath": "infrastructure/package.json",
+      "type": "config",
+      "checksum": "6567ad0c24dc3b9d15f953302371e26fc3a299c1b244eaddb2a10c03203f3961"
+    },
+    {
+      "filePath": "prompts/domain-agent.md",
+      "type": "prompt",
+      "checksum": "fbfa63e7ba94162d5cf960664bd69b293e44c05f968af6e0a26ca81dbd65e0cc"
+    },
+    {
+      "filePath": "prompts/backend-agent.md",
+      "type": "prompt",
+      "checksum": "04f8935123a01a47ab3c28789bfa228be9d93d931d108903449bab0c8fe97959"
+    },
+    {
+      "filePath": "prompts/qa-agent.md",
+      "type": "prompt",
+      "checksum": "815858ba07c071f6a16f293a39188e478cc938f8bcd5d4175839d28a61fb97d9"
+    }
+  ]
+}

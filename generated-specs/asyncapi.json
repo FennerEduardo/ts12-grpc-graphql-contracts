@@ -1,0 +1,10 @@
+{
+  "asyncapi": "2.6.0",
+  "info": {
+    "title": "Compilación e Implementación de Contratos gRPC y GraphQL en gherkin-ai AsyncAPI Specification",
+    "version": "1.0.0",
+    "description": "Auto-generated AsyncAPI events for Compilación e Implementación de Contratos gRPC y GraphQL en gherkin-ai from Gherkin feature spec."
+  },
+  "defaultContentType": "application/json",
+  "channels": {}
+}

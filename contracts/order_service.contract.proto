@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package transactional.v1;
+
+option go_package = "transactional/v1/orderpb";
+option java_package = "com.transactional.v1.orderpb";
+
+service OrderGrpcService {
+  rpc CreateOrderSaga (CreateOrderRequest) returns (CreateOrderResponse);
+  rpc StreamOrderStatus (OrderStatusRequest) returns (stream OrderStatusUpdate);
+}
+
+message CreateOrderRequest {
+  string order_id = 1;
+  string customer_id = 2;
+  double total_amount = 3;
+  string currency = 4;
+  string idempotency_key = 5;
+}
+
+message CreateOrderResponse {
+  string order_id = 1;
+  string status = 2;
+  string correlation_id = 3;
+  int64 created_at_timestamp = 4;
+}
+
+message OrderStatusRequest {
+  string order_id = 1;
+}
+
+message OrderStatusUpdate {
+  string order_id = 1;
+  string current_step = 2;
+  string status = 3;
+  int64 timestamp = 4;
+}
