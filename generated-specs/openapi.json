@@ -9,7 +9,7 @@
     "/api/v1/compilaci-n-e-implementaci-n-de-contratos-grpc-y-graphql-en-gherkin-ai": {
       "post": {
         "summary": "POST /api/v1/compilaci-n-e-implementaci-n-de-contratos-grpc-y-graphql-en-gherkin-ai",
-        "operationId": "unknownCompilacineImplementacindeContratosgRPCyGraphQLengherkinai",
+        "operationId": "unknownCompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi",
         "security": [],
         "requestBody": {
           "required": true,
