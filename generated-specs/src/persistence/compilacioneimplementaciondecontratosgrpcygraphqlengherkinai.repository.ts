@@ -7,16 +7,16 @@ export class CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiReposit
   constructor(private prisma: PrismaService) {}
 
   async findById(id: string): Promise<CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi | null> {
-    return this.prisma.compilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.findUnique({ where: { id } });
+    return this.prisma.tenant.compilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.findUnique({ where: { id } });
   }
 
-  async save(data: Omit<CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi, 'id' | 'createdAt' | 'updatedAt'>): Promise<CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi> {
-    return this.prisma.compilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.create({
+  async save(data: Omit<CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi, 'id' | 'tenantId' | 'createdAt' | 'updatedAt'>): Promise<CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi> {
+    return this.prisma.tenant.compilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.create({
       data,
     });
   }
 
   async delete(id: string): Promise<void> {
-    await this.prisma.compilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.delete({ where: { id } });
+    await this.prisma.tenant.compilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.delete({ where: { id } });
   }
 }
