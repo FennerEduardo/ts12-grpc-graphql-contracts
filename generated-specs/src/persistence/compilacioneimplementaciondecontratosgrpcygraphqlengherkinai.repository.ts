@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
+import { currentTenant } from '../infrastructure/multitenancy/tenant.storage';
 import type { CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi } from '@prisma/client';
 
 @Injectable()
@@ -10,9 +11,10 @@ export class CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiReposit
     return this.prisma.tenant.compilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.findUnique({ where: { id } });
   }
 
+  /** Creates a row for the tenant of the authenticated request (never a default tenant). */
   async save(data: Omit<CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi, 'id' | 'tenantId' | 'createdAt' | 'updatedAt'>): Promise<CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi> {
     return this.prisma.tenant.compilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.create({
-      data,
+      data: { ...data, tenantId: currentTenant() },
     });
   }
 

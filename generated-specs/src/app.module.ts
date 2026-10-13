@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ApplicationCqrsModule } from './compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.cqrs';
+import { RuntimeModule } from './runtime/runtime.module';
+import { CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiModule } from './compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.module';
 
 @Module({
-  imports: [ApplicationCqrsModule]
+  imports: [RuntimeModule, CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiModule]
 })
 export class AppModule {}

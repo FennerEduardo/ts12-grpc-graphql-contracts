@@ -1,18 +1,43 @@
 import { randomUUID } from 'crypto';
 import { SpanKind, SpanStatusCode, trace } from '@opentelemetry/api';
 import type { Pool } from 'pg';
-import { CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiAggregate, DomainValidationError, type CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiCommand, type CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiDomainEvent, type CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiState } from '../compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/domain/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.aggregate';
+import { DomainValidationError } from '../compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/domain/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.aggregate';
+import { CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiAggregate, type CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiCommand, type CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiState } from '../compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/domain/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.aggregate';
 import { schemaName } from './schema';
 import { contextFrom, traceparentOf, tracer } from './telemetry';
 
-const AGGREGATE_TYPE = 'CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi';
+interface LoadedAggregate {
+  readonly state: string;
+  readonly version: number;
+}
 
-const COMMANDS: Record<string, (aggregate: CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiAggregate, command: CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiCommand) => CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiDomainEvent> = {
-  process_compilacion_e_implementacion_de_contratos_g_rpc_y_graph_ql_en_gherkin_ai: (a, c) => a.processCompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi(c)
+type DomainCommand = { id: string; payload: Record<string, unknown> };
+
+/** How the command service creates, restores and runs commands on one aggregate type. */
+interface AggregateRuntime {
+  create(id: string): LoadedAggregate;
+  restore(id: string, state: string, version: number): LoadedAggregate;
+  commands: Record<string, (aggregate: LoadedAggregate, command: DomainCommand) => { type: string; version: number }>;
+}
+
+/** Every aggregate of this service, by aggregate type (one per feature). */
+const AGGREGATES: Record<string, AggregateRuntime> = {
+  CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi: {
+    create: id => new CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiAggregate(id),
+    restore: (id, state, version) => CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiAggregate.restore(id, state as CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiState, version),
+    commands: {
+      process_compilacion_e_implementacion_de_contratos_g_rpc_y_graph_ql_en_gherkin_ai: (a, c) => (a as CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiAggregate).processCompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi(c as CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiCommand)
+    }
+  }
 };
+
+/** Aggregate type used when a request does not name one. */
+export const DEFAULT_AGGREGATE = 'CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi';
 
 export interface CommandRequest {
   tenantId: string;
+  /** Aggregate type (feature), e.g. 'CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi'; defaults to DEFAULT_AGGREGATE. */
+  aggregateType?: string;
   aggregateId: string;
   command: string;
   payload?: Record<string, unknown>;
@@ -41,8 +66,11 @@ export class CommandService {
 
   async handle(req: CommandRequest): Promise<CommandResult> {
     if (!req.tenantId) throw new DomainValidationError('tenantId is required');
+    const aggregateType = req.aggregateType ?? DEFAULT_AGGREGATE;
+    const kind = AGGREGATES[aggregateType];
+    if (!kind) throw new DomainValidationError(`Unknown aggregate type ${aggregateType}`);
     const parent = contextFrom(req.traceparent);
-    const span = tracer().startSpan(`CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.${req.command}`, {
+    const span = tracer().startSpan(`${aggregateType}.${req.command}`, {
       kind: SpanKind.INTERNAL,
       attributes: { 'tenant.id': req.tenantId, 'aggregate.id': req.aggregateId }
     }, parent);
@@ -59,18 +87,18 @@ export class CommandService {
           return { status: 'in-progress', aggregateId: req.aggregateId };
         }
       }
-      const { rows } = await client.query(`SELECT state, version FROM ${this.s}.ghk_aggregates WHERE tenant_id = $1 AND aggregate_type = $2 AND id = $3 FOR UPDATE`, [req.tenantId, AGGREGATE_TYPE, req.aggregateId]);
+      const { rows } = await client.query(`SELECT state, version FROM ${this.s}.ghk_aggregates WHERE tenant_id = $1 AND aggregate_type = $2 AND id = $3 FOR UPDATE`, [req.tenantId, aggregateType, req.aggregateId]);
       const aggregate = rows[0]
-        ? CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiAggregate.restore(req.aggregateId, rows[0].state as CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiState, Number(rows[0].version))
-        : new CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAiAggregate(req.aggregateId);
-      const handler = COMMANDS[req.command];
+        ? kind.restore(req.aggregateId, String(rows[0].state), Number(rows[0].version))
+        : kind.create(req.aggregateId);
+      const handler = kind.commands[req.command];
       if (!handler) throw new DomainValidationError(`Unknown command ${req.command}`);
       const event = handler(aggregate, { id: req.aggregateId, payload: req.payload ?? {} });
 
       await client.query(
         `INSERT INTO ${this.s}.ghk_aggregates (tenant_id, aggregate_type, id, state, version) VALUES ($1, $2, $3, $4, $5)
          ON CONFLICT (tenant_id, aggregate_type, id) DO UPDATE SET state = EXCLUDED.state, version = EXCLUDED.version, updated_at = now()`,
-        [req.tenantId, AGGREGATE_TYPE, req.aggregateId, aggregate.state, aggregate.version]
+        [req.tenantId, aggregateType, req.aggregateId, aggregate.state, aggregate.version]
       );
       await client.query(
         `INSERT INTO ${this.s}.ghk_outbox (id, tenant_id, aggregate_id, event_type, payload, traceparent) VALUES ($1, $2, $3, $4, $5, $6)`,
@@ -94,8 +122,8 @@ export class CommandService {
   }
 
   /** The aggregate as tenant `tenantId` sees it (undefined for other tenants' aggregates). */
-  async load(tenantId: string, aggregateId: string): Promise<{ state: string; version: number } | undefined> {
-    const { rows } = await this.pool.query(`SELECT state, version FROM ${this.s}.ghk_aggregates WHERE tenant_id = $1 AND aggregate_type = $2 AND id = $3`, [tenantId, AGGREGATE_TYPE, aggregateId]);
+  async load(tenantId: string, aggregateId: string, aggregateType = DEFAULT_AGGREGATE): Promise<{ state: string; version: number } | undefined> {
+    const { rows } = await this.pool.query(`SELECT state, version FROM ${this.s}.ghk_aggregates WHERE tenant_id = $1 AND aggregate_type = $2 AND id = $3`, [tenantId, aggregateType, aggregateId]);
     return rows[0] ? { state: rows[0].state, version: Number(rows[0].version) } : undefined;
   }
 }

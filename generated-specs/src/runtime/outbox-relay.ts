@@ -15,7 +15,7 @@ export interface Topology {
 export function topology(prefix = 'compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai'): Topology {
   return { exchange: `${prefix}.events`, queue: `${prefix}.consumer`, dlx: `${prefix}.dlx`, dlq: `${prefix}.dlq` };
 }
-export const DEFAULT_TOPOLOGY: Topology = {"exchange":"compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.events","queue":"compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.consumer","dlx":"compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.dlx","dlq":"compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.dlq"};
+export const DEFAULT_TOPOLOGY: Topology = {"exchange":"graphql-grpc-domain-contracts.events","queue":"graphql-grpc-domain-contracts.consumer","dlx":"graphql-grpc-domain-contracts.dlx","dlq":"graphql-grpc-domain-contracts.dlq"};
 
 /** Topic exchange -> consumer queue, which dead-letters rejected messages to a fanout DLX -> DLQ. */
 export async function declareTopology(channel: Channel, t: Topology = DEFAULT_TOPOLOGY): Promise<void> {

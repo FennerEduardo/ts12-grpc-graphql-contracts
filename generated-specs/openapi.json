@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Compilación e Implementación de Contratos gRPC y GraphQL en gherkin-ai API Specification",
+    "title": "graphql-grpc-domain-contracts API",
     "version": "1.0.0",
-    "description": "Auto-generated OpenAPI specification for Compilación e Implementación de Contratos gRPC y GraphQL en gherkin-ai from Gherkin feature spec."
+    "description": "Service API of graphql-grpc-domain-contracts, merged from 1 feature contract(s) in contracts/."
   },
   "paths": {
     "/api/v1/compilaci-n-e-implementaci-n-de-contratos-grpc-y-graphql-en-gherkin-ai": {
