@@ -58,4 +58,9 @@ describe('CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi HTTP appl
     const res = await post(`/api/v1/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/${randomUUID()}/no_such_command`, { authorization: token({ [TENANT_CLAIM]: tenant }) });
     expect(res.status).toBe(422);
   });
+
+  it('reports liveness and database readiness without a token', async () => {
+    expect((await fetch(`${base}/health`)).status).toBe(200);
+    expect((await fetch(`${base}/health/ready`)).status).toBe(200);
+  });
 });

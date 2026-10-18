@@ -6,9 +6,9 @@
     "description": "Service API of graphql-grpc-domain-contracts, merged from 1 feature contract(s) in contracts/."
   },
   "paths": {
-    "/api/v1/compilaci-n-e-implementaci-n-de-contratos-grpc-y-graphql-en-gherkin-ai": {
+    "/api/v1/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai": {
       "post": {
-        "summary": "POST /api/v1/compilaci-n-e-implementaci-n-de-contratos-grpc-y-graphql-en-gherkin-ai",
+        "summary": "POST /api/v1/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai",
         "operationId": "unknownCompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi",
         "security": [],
         "requestBody": {

@@ -6,9 +6,9 @@
     "description": "Auto-generated OpenAPI specification for Compilación e Implementación de Contratos gRPC y GraphQL en gherkin-ai from Gherkin feature spec."
   },
   "paths": {
-    "/api/v1/compilaci-n-e-implementaci-n-de-contratos-grpc-y-graphql-en-gherkin-ai": {
+    "/api/v1/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai": {
       "post": {
-        "summary": "POST /api/v1/compilaci-n-e-implementaci-n-de-contratos-grpc-y-graphql-en-gherkin-ai",
+        "summary": "POST /api/v1/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai",
         "operationId": "unknownCompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi",
         "security": [],
         "requestBody": {
