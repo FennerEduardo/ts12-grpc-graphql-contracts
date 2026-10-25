@@ -1,0 +1,388 @@
+{
+  "version": "2",
+  "cliVersion": "3.2.1",
+  "features": {
+    "features/non_rest_contracts.feature": {
+      "checksum": "01a9d516a9d9070f02bb124a599ca3295bc1461dd69de02636ae59af2ec23999",
+      "contracts": {
+        "contracts/non-rest-contracts/ADR-CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.md": "4e9671131a2f8074e7a6cbcdca8443f428650241e58b7ce658f561c1dd66c83c",
+        "contracts/non-rest-contracts/openapi.json": "992806f1e3dd2303011c28e6728fdd23f9c9c4371a5d98214279d804767b24ea",
+        "openapi.json": "948625f16d34294336e660de723d9827c243d757aa8d519e85525dc45a5f4040",
+        "contracts.ts": "bbaca3032f5b25f19d029db094e467908ddae6d6eff4492bfe0b3091398be1c8",
+        "contracts/non-rest-contracts/asyncapi.json": "c57dddb35260fe01a7f5d0d59e9f377d250aadd29d4c8e930e145a59ae824887",
+        "asyncapi.json": "d4aa7275192deff8d5258208ce2691278a0ac8a18bd2740a7308d600c8dedffa",
+        "contracts/buf.yaml": "bda68586bbdf808b33c348d4c11029efaedf23a94b5e078208337606e24cd1ce",
+        "contracts/proto/compilacion_e_implementacion_de_contratos_g_rpc_y_graph_ql_en_gherkin_ai/v1/compilacion_e_implementacion_de_contratos_g_rpc_y_graph_ql_en_gherkin_ai.proto": "ddfceda7ecabea71c301107aab175a54f010f3080a0e268933dfeca59c2c9b3e",
+        "contracts/compilacion_e_implementacion_de_contratos_g_rpc_y_graph_ql_en_gherkin_ai.graphql": "a6ca328e401a948e30aac26e7a5a01e6872d5df72c4bd9f81d62f5626c838604",
+        "contracts/validate-graphql.cjs": "261a467cb256e16b5a631fc511ddaf749669fb17deec9563508f247ad0215fd7"
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "filePath": ".dockerignore",
+      "type": "test",
+      "checksum": "24a2d166089e691663ae1f8440d87dcff0d08b861e09b4becd5d1c8d048c8fae",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": ".env.example",
+      "type": "config",
+      "checksum": "5c440f27ab7dc54b9adcc643d1fad3e1ff58e058a0699cc965785470826b6a3a",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "ADR-001-architecture-decisions.md",
+      "type": "other",
+      "checksum": "4e9671131a2f8074e7a6cbcdca8443f428650241e58b7ce658f561c1dd66c83c",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "asyncapi.json",
+      "type": "contract",
+      "checksum": "d4aa7275192deff8d5258208ce2691278a0ac8a18bd2740a7308d600c8dedffa",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "contracts.ts",
+      "type": "contract",
+      "checksum": "bbaca3032f5b25f19d029db094e467908ddae6d6eff4492bfe0b3091398be1c8",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "contracts/buf.yaml",
+      "type": "test",
+      "checksum": "bda68586bbdf808b33c348d4c11029efaedf23a94b5e078208337606e24cd1ce",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "contracts/compilacion_e_implementacion_de_contratos_g_rpc_y_graph_ql_en_gherkin_ai.graphql",
+      "type": "test",
+      "checksum": "a6ca328e401a948e30aac26e7a5a01e6872d5df72c4bd9f81d62f5626c838604",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "contracts/non-rest-contracts/ADR-CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.md",
+      "type": "other",
+      "checksum": "4e9671131a2f8074e7a6cbcdca8443f428650241e58b7ce658f561c1dd66c83c",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "contracts/non-rest-contracts/asyncapi.json",
+      "type": "contract",
+      "checksum": "c57dddb35260fe01a7f5d0d59e9f377d250aadd29d4c8e930e145a59ae824887",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "contracts/non-rest-contracts/openapi.json",
+      "type": "openapi",
+      "checksum": "992806f1e3dd2303011c28e6728fdd23f9c9c4371a5d98214279d804767b24ea",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "contracts/proto/compilacion_e_implementacion_de_contratos_g_rpc_y_graph_ql_en_gherkin_ai/v1/compilacion_e_implementacion_de_contratos_g_rpc_y_graph_ql_en_gherkin_ai.proto",
+      "type": "test",
+      "checksum": "ddfceda7ecabea71c301107aab175a54f010f3080a0e268933dfeca59c2c9b3e",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "contracts/validate-graphql.cjs",
+      "type": "test",
+      "checksum": "261a467cb256e16b5a631fc511ddaf749669fb17deec9563508f247ad0215fd7",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "cucumber.js",
+      "type": "test",
+      "checksum": "c26c8fcfc25e83d0713b8d30a381a69d17e7f8ed37100c40d245ffd762600697",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "docker-compose.yml",
+      "type": "config",
+      "checksum": "57d090acb2751e384fc5bec6f9e64e1b9bbdafd952402b56bf4414950794d159",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "Dockerfile",
+      "type": "test",
+      "checksum": "ee4ab0da1eef85e8a03bfda1172eae71a3483c61570b2becb026289f0bac88f2",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "features/non_rest_contracts.feature",
+      "type": "other",
+      "checksum": "01a9d516a9d9070f02bb124a599ca3295bc1461dd69de02636ae59af2ec23999",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "fixtures.ts",
+      "type": "fixture",
+      "checksum": "602bbc1e1d9e458328142539d51184e233986f8eee44e1cbe6b65387d1fc96c1",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "jest.config.js",
+      "type": "test",
+      "checksum": "456021a6d978206c28abfd7b4ae4925a867b1626edd7515309877700831809f4",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "jest.integration.config.js",
+      "type": "test",
+      "checksum": "33884f0f1fdd1199be1d8a790765b6ec5b411aa9df06f28a7bfc94273209eff8",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "openapi.json",
+      "type": "openapi",
+      "checksum": "948625f16d34294336e660de723d9827c243d757aa8d519e85525dc45a5f4040",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "package.json",
+      "type": "config",
+      "checksum": "fd89465ab3ba7e778b28d99ab9905dcd3070d402ea9d581f8654e0658fdd2573",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "prisma/schema.prisma",
+      "type": "other",
+      "checksum": "4621e26d236f37d90202ab9f576bc324f96018e3cdca4856bdd7a9b4f5cb0c55",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "prompts/backend-agent.md",
+      "type": "prompt",
+      "checksum": "ea64f29a801bb8fda4dd473dcb85389b15d486bf14ec6460de09d465fd68b45e",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "prompts/domain-agent.md",
+      "type": "prompt",
+      "checksum": "aba3deddc9f3443b31675f27a922d73ab7a4356661d8d61522d000d4a3171ed9",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "prompts/qa-agent.md",
+      "type": "prompt",
+      "checksum": "398bfbe147f0a779a0e915323d4496c7bbcb322015bb9f75b6a3e5c1b96a797a",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "seed.sql",
+      "type": "fixture",
+      "checksum": "b9d7195e1ad71f20ca14bbe2309f8ecef9fc0313e7be17447719de154dc91cff",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/app.module.ts",
+      "type": "test",
+      "checksum": "d25eb0f75aa3586849af5c0bb6cfec6981766d0d449c0172251b9ae595b1e526",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/auth/jwt-tenant.guard.ts",
+      "type": "test",
+      "checksum": "1d0325fc16554059ea85af84e9ae3137b42c101273b3b2c90cab29e578fc87ad",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/auth/jwt.ts",
+      "type": "test",
+      "checksum": "07db0c61a52420a9c6a7f8809ef966c8b3f4a51d8d55d20df26a57d0aa366b7a",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.controller.ts",
+      "type": "test",
+      "checksum": "4b5fb73230198221bf0b5226aecabed73cac6cb0f269da1140b3b71c0348bb23",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.module.ts",
+      "type": "test",
+      "checksum": "756151ffc1fab293196df564f154323ba868de64c3ccca62750e3b4d6d9b0a0d",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/domain/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.aggregate.spec.ts",
+      "type": "test",
+      "checksum": "24d1c635ea5c295fd3a16ce8340821255117c575f7a4e1561c1bb97085ae0362",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai/domain/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.aggregate.ts",
+      "type": "test",
+      "checksum": "318aa427a6db1d46916ba7b21fd7774e6805b1c6eaf1d47bf62b3e2cd8ab9956",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/infrastructure/multitenancy/tenant.storage.ts",
+      "type": "test",
+      "checksum": "09819f6dfb6c404979fcb90f286c74a398faf0f5adbbe64bb54c17279d3a9d33",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/main.ts",
+      "type": "test",
+      "checksum": "a41749b02f03bfb845b683567632ead58f3b3f272b8c13af680b713fa20c4692",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/persistence/compilacioneimplementaciondecontratosgrpcygraphqlengherkinai.repository.ts",
+      "type": "other",
+      "checksum": "fbc6eeddc67538c870b181933e23141296f09dffe724ffeda4365325cb44b52c",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/prisma/prisma.service.ts",
+      "type": "test",
+      "checksum": "d948ce80a568086fb8f9989cc8174634ed6f62ccd0ed7ee8a037ec81ec71eb95",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/broker.ts",
+      "type": "test",
+      "checksum": "95b0bd57c433200d3706a89260097880225f89a786596f6096ffc2522de66894",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/command-service.ts",
+      "type": "test",
+      "checksum": "48196f8ffc59048cd74e034dd314a4de5c3611a94c51ab1b140f900be1f859fe",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/inbox-consumer.ts",
+      "type": "test",
+      "checksum": "26d6a1e1a55df645ae981184c67684830220ef6aa62e11385af4e2ca884672ea",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/index.ts",
+      "type": "test",
+      "checksum": "4ebaa60432adad597200b0b234230edd23f26aac818db06c41f0fa71267e48cb",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/otel.ts",
+      "type": "test",
+      "checksum": "8400a5e1a7a2a0f3f76b1d90aff364c50d4f2a78d56f5a4c57eedf19589f6962",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/outbox-relay.ts",
+      "type": "test",
+      "checksum": "edc22e6f853e656fe848832fa7731b634b4b6857c4027db0d474dda53fdbeb52",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/runtime.module.ts",
+      "type": "test",
+      "checksum": "70be6d6428fc58ea2cd33cd4e33af96a91776bbf468bef9e74cd68978fcdced5",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/saga.ts",
+      "type": "test",
+      "checksum": "f6200104da1c78817893f2c6a52e4c58367c83059e423a39e4747a81421e698b",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/schema.ts",
+      "type": "test",
+      "checksum": "0bbb8b670d44558bc5a97691265540380397de23680b4fa9c12eba2f88800255",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "src/runtime/telemetry.ts",
+      "type": "test",
+      "checksum": "7615e32aa756ec4bdee5ed90d2b057830fa078d9e09ab52ed38b90e203a623ed",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "test/integration/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.http.int-spec.ts",
+      "type": "test",
+      "checksum": "a3fe95d2cbe1c6a5875514f0c42c56da5292ae8a63abf4da1e6047a84ecf527e",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "test/integration/runtime.int-spec.ts",
+      "type": "test",
+      "checksum": "17834401176dc9f2be6a968095a7e40f111ace460255b7749f0de6de27e9016e",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "test/steps/compilacion-e-implementacion-de-contratos-g-rpc-y-graph-ql-en-gherkin-ai.steps.ts",
+      "type": "test",
+      "checksum": "9c4b24b05a80cd3b6f0dd2ac7a2924c771840dec80300eed69a066d887d17d82",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "tsconfig.build.json",
+      "type": "test",
+      "checksum": "cca65441174fe56cd889690dc8fe916f176597b99c8d2fcc29395b987992257e",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    },
+    {
+      "filePath": "tsconfig.json",
+      "type": "test",
+      "checksum": "3d5f419774b303fe446cb8d9f4ba70123461288769a27275f042de6cb70d52a1",
+      "feature": "features/non_rest_contracts.feature",
+      "generatedAt": "2026-10-25T05:38:20.697Z"
+    }
+  ],
+  "executions": []
+}
