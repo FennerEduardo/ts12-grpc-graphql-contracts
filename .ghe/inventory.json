@@ -1,6 +1,6 @@
 {
   "version": "2",
-  "cliVersion": "3.2.1",
+  "cliVersion": "3.2.2",
   "features": {
     "features/non_rest_contracts.feature": {
       "checksum": "01a9d516a9d9070f02bb124a599ca3295bc1461dd69de02636ae59af2ec23999",
@@ -8,7 +8,7 @@
         "contracts/non-rest-contracts/ADR-CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.md": "4e9671131a2f8074e7a6cbcdca8443f428650241e58b7ce658f561c1dd66c83c",
         "contracts/non-rest-contracts/openapi.json": "992806f1e3dd2303011c28e6728fdd23f9c9c4371a5d98214279d804767b24ea",
         "openapi.json": "948625f16d34294336e660de723d9827c243d757aa8d519e85525dc45a5f4040",
-        "contracts.ts": "bbaca3032f5b25f19d029db094e467908ddae6d6eff4492bfe0b3091398be1c8",
+        "contracts.ts": "e77ae959a2c192ca4e554019f5377c30097059651e5deb7f55b13ae9eab0a21d",
         "contracts/non-rest-contracts/asyncapi.json": "c57dddb35260fe01a7f5d0d59e9f377d250aadd29d4c8e930e145a59ae824887",
         "asyncapi.json": "d4aa7275192deff8d5258208ce2691278a0ac8a18bd2740a7308d600c8dedffa",
         "contracts/buf.yaml": "bda68586bbdf808b33c348d4c11029efaedf23a94b5e078208337606e24cd1ce",
@@ -50,9 +50,9 @@
     {
       "filePath": "contracts.ts",
       "type": "contract",
-      "checksum": "bbaca3032f5b25f19d029db094e467908ddae6d6eff4492bfe0b3091398be1c8",
+      "checksum": "e77ae959a2c192ca4e554019f5377c30097059651e5deb7f55b13ae9eab0a21d",
       "feature": "features/non_rest_contracts.feature",
-      "generatedAt": "2026-10-25T05:38:20.697Z"
+      "generatedAt": "2026-10-30T20:48:35.593Z"
     },
     {
       "filePath": "contracts/buf.yaml",
