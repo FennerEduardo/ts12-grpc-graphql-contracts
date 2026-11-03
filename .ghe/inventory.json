@@ -1,6 +1,6 @@
 {
   "version": "2",
-  "cliVersion": "3.2.2",
+  "cliVersion": "3.3.0",
   "features": {
     "features/non_rest_contracts.feature": {
       "checksum": "01a9d516a9d9070f02bb124a599ca3295bc1461dd69de02636ae59af2ec23999",
@@ -8,7 +8,7 @@
         "contracts/non-rest-contracts/ADR-CompilacionEImplementacionDeContratosGRpcYGraphQlEnGherkinAi.md": "4e9671131a2f8074e7a6cbcdca8443f428650241e58b7ce658f561c1dd66c83c",
         "contracts/non-rest-contracts/openapi.json": "992806f1e3dd2303011c28e6728fdd23f9c9c4371a5d98214279d804767b24ea",
         "openapi.json": "948625f16d34294336e660de723d9827c243d757aa8d519e85525dc45a5f4040",
-        "contracts.ts": "e77ae959a2c192ca4e554019f5377c30097059651e5deb7f55b13ae9eab0a21d",
+        "contracts.ts": "1dc352547acfcc94bd02e5a77b26c4296f9c65c12121fdab7d1ae0ad31c61f84",
         "contracts/non-rest-contracts/asyncapi.json": "c57dddb35260fe01a7f5d0d59e9f377d250aadd29d4c8e930e145a59ae824887",
         "asyncapi.json": "d4aa7275192deff8d5258208ce2691278a0ac8a18bd2740a7308d600c8dedffa",
         "contracts/buf.yaml": "bda68586bbdf808b33c348d4c11029efaedf23a94b5e078208337606e24cd1ce",
@@ -29,9 +29,9 @@
     {
       "filePath": ".env.example",
       "type": "config",
-      "checksum": "5c440f27ab7dc54b9adcc643d1fad3e1ff58e058a0699cc965785470826b6a3a",
+      "checksum": "bcdb54039cbc13d9370beaeeb046158f3351513b00ec55324596f73095faf2c3",
       "feature": "features/non_rest_contracts.feature",
-      "generatedAt": "2026-10-25T05:38:20.697Z"
+      "generatedAt": "2026-11-03T13:48:58.798Z"
     },
     {
       "filePath": "ADR-001-architecture-decisions.md",
@@ -50,9 +50,9 @@
     {
       "filePath": "contracts.ts",
       "type": "contract",
-      "checksum": "e77ae959a2c192ca4e554019f5377c30097059651e5deb7f55b13ae9eab0a21d",
+      "checksum": "1dc352547acfcc94bd02e5a77b26c4296f9c65c12121fdab7d1ae0ad31c61f84",
       "feature": "features/non_rest_contracts.feature",
-      "generatedAt": "2026-10-30T20:48:35.593Z"
+      "generatedAt": "2026-11-03T13:48:58.798Z"
     },
     {
       "filePath": "contracts/buf.yaml",
@@ -113,9 +113,9 @@
     {
       "filePath": "docker-compose.yml",
       "type": "config",
-      "checksum": "57d090acb2751e384fc5bec6f9e64e1b9bbdafd952402b56bf4414950794d159",
+      "checksum": "99af2136638d763b5b1cdfe469ee251e0a37e358d7900cc8656d6bdf7441ef8d",
       "feature": "features/non_rest_contracts.feature",
-      "generatedAt": "2026-10-25T05:38:20.697Z"
+      "generatedAt": "2026-11-03T13:48:58.798Z"
     },
     {
       "filePath": "Dockerfile",
@@ -169,9 +169,9 @@
     {
       "filePath": "prisma/schema.prisma",
       "type": "other",
-      "checksum": "4621e26d236f37d90202ab9f576bc324f96018e3cdca4856bdd7a9b4f5cb0c55",
+      "checksum": "e39e9c2ef9ef64ad08aecb86c04ce9cee722f0097d98b63d304b6df6cf63ced6",
       "feature": "features/non_rest_contracts.feature",
-      "generatedAt": "2026-10-25T05:38:20.697Z"
+      "generatedAt": "2026-11-03T13:48:58.798Z"
     },
     {
       "filePath": "prompts/backend-agent.md",
